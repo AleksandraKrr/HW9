@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  color: rgb(75, 69, 69);
+}
+
+.container_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
+  margin: 0 auto;   
+  width: 100%;
+  max-width: 1200px;
+  background-color: rgb(230, 229, 244);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+}
+
+.navigation {
+  margin: 30px auto;
+  width: 100%;
+}
+
+.navigation_list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;  
+}
+
+.button {
+  transform: scale(1);
+  transition-duration: 800ms;
+  border-radius: 30px;
+  border: 0;
+  padding: 10px;
+  background-color: rgb(120, 201, 154);
+  font-size: 32px;
+  font-family: auto;
+  color: white;
+}
+
+.button:hover {
+  transform: scale(1.2);
+  transition-duration: 800ms;
+  background-color: rgb(195, 197, 87);
+  color: black;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main_section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.main_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 1700ms;
+  transform: rotate(0deg);
+  transition-timing-function: ease;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(84, 11, 130);
+  font-size: 24px;
+  color: white;
+}
+
+.main_item:hover {
+  transform: rotate(180deg);
+  transition-duration: 1700ms;
+  transition-timing-function: ease;
+}
+
+.ball_container {
+  position: relative;
+  height: 25vh;
+}
+
+.ball {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation-name: ball;
+  animation-duration: 5000ms;
+  background-color: aqua;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.ball:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ball {
+  0% {
+    transform: translate(0, -60px);
+    background-color: yellowgreen;
+  }
+  
+  10% {
+    transform: translate(115px, -100px);
+    background-color: orange;
+  }
+
+  20% {
+    transform: translate(230px, 50px);
+    background-color: orangered;
+  }
+
+  30% {
+    transform: translate(345px, -100px);
+    background-color: orchid;
+  }
+
+  40% {
+    transform: translate(460px, 50px);
+    background-color: darkorchid;
+  }
+
+  50% {
+    transform: translate(575px, -100px);
+    background-color: deepskyblue;
+  }
+
+  60% {
+    transform: translate(690px, 50px);
+    background-color: blue;
+  }
+
+  70% {
+    transform: translate(805px, -100px);
+    background-color: gray;
+  }
+
+  80% {
+    transform: translate(920px, 50px);
+    background-color: yellowgreen;
+  }
+
+  90% {
+    transform: translate(1035px, -100px);
+    background-color: gold;
+  }
+
+  100% {
+    transform: translate(1150px, -60px);
+    background-color: orange;
+  }
+}
